@@ -1,0 +1,68 @@
+<div class="container">
+	<div class="row" style="background-color:white;margin-top:100px;padding-top:10px;">
+	  
+    <div class="col-sm-3">
+        <div ng-include="'partials/dashboard-navbar.html'"></div>
+    </div>
+    <div class="col-sm-9">
+        <div style="background-color:#e6e6e6;padding:10px;">
+            <div class="row">
+                <div class="col-md-3">
+                    <div style="border:1px solid #d9d9d9;padding:10px;background-color:white;">
+                    <div ng-include="'partials/actualite/actualite-action.html'"></div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div style="border:1px solid #d9d9d9;padding:10px;background-color:white;border-radius:3px;">
+                    <form class="form-horizontal" ng-controller="actualiteController" method="post" ng-submit="creer_actualite();">
+                        <div class="row" ng-if="alert_ajouter">
+                            <div class="col-md-12">
+                            <div class="" style="padding:10px;background-color:#caffca;color:green;text-align:center;">
+                            <span style="font-size:px;"><i class="fa fa-check-circle"></i> <b>Actualité ajouter avec succès</b></span>
+                            </div>
+                            </div>
+                            </div>
+                        <div class="row">
+                            <div class="col-md-12" style="margin-top:-20px;">
+                                <h2>Création d'actualité</h2>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <label for="titre" class="control-label">Titre</label>
+                                <input type="text" class="form-control" ng-model="actualite.titre" name="titre" required="required" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <label for="description" class="control-label">Description</label>
+                                <textarea type="text" class="form-control" ng-model="actualite.description" name="description" required="required" placeholder="5000 caractères maximum"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <label for="image" class="control-label">Image</label>
+                                <input file-model='actualite.file' type="file" onchange="angular.element(this).scope().previewPhoto(event)"/>
+                                <div class="row" style="margin-top:5px;">			 
+                                    <div class="col-md-12">			 
+                                 <label for="uploadarticle" class="custom-file-upload">
+                                 <img ng-src="{{photo}}" class="img-responsive" style="width:100%;height:160px;"/>
+                                 </label>
+                                </div>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button class="btn btn-success btn-green btn-sm" style="padding-left:40px;padding-right:40px;" type="submit">Créer actualité</button>
+                            </div>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  </div>

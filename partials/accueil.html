@@ -1,0 +1,291 @@
+﻿<div class="container">
+	<div class="row">
+<div class="container">
+	<div class="" style="background-color:white;margin-left:60px;margin-right:60px;margin-top:100px;padding:20px;">
+	  <div class="row">
+		<div class="col-md-9">
+			<img src="web/img/banniere.png" style="width:100%;height:400px;">
+		</div>
+		<div class="col-md-3">
+			<div style="border:1px solid gey;margin-bottom:30px;">
+				<div class="col-md-12">
+					<div class="row">
+					 <img src="web/img/img1.png" style="width:100%;height:150px;">
+					 </div>
+			   </div>
+			   <div class="col-md-12" style="margin-top:20px;">
+					<div class="row">
+					<img src="web/img/img2.png" style="width:100%;height:230px;">
+					</div>
+			   </div>
+			</div>
+		</div>
+		<div class="col-md-9" hidden>
+			<img src="web/img/banniere1.png" style="width:100%;height:300px;">
+		</div>
+		<div class="col-md-3" hidden>
+			<img src="web/img/img3.png" style="width:100%;height:300px;">
+		</div>
+		</div>
+	</div>
+	
+	<div style="padding:20px;background-color:white;margin-left:60px;margin-right:60px;margin-top:20px;">
+		<div class="row" ng-controller="actualiteController">
+			<div class="col-md-12" style="">
+			<span>Suivre jeuxvideo.com / Toute l'actu de la Xbox Series X et S et ses jeux</span><hr style="margin-top:10px;margin-bottom:10px;">
+			</div>
+			  <div class="col-md-12" style="margin-bottom:10px;">
+				  <span style="font-weight:bold;font-size:20px;">L'univers « Xbox Series »</span>
+			  </div>
+			  <div class="col-md-4" ng-repeat="data in listeActualite">
+				  <div class="size-genrale" style="position:relative;overflow:hidden;border-radius:3px;margin-bottom:20px;">
+					<span class="btn btn-success btn-sm" style="position:absolute;top:10px;left:10px;background-color:#8ac501;border:1px solid transparent;">NEW JEU</span>
+					<img ng-src="uploads/{{data.filename}}" class="img-responsive" style="width:100%;height:170px;">
+					<div class="size-child" style="padding:10px;background-color:black;color:white;position:absolute;bottom:0px;background-color: rgba(0, 0, 0, 0.7);">
+						<span>{{ data.titre_actualite| limitTo: 77 }}{{data.titre_actualite.length > 77 ? '...' : ''}}</span>
+					</div>
+				  </div>
+			</div>
+			
+
+  
+			  <div class="col-md-12" style="margin-bottom:10px;padding-top:20px;">
+				<hr style="margin-top:10px;margin-bottom:10px;">
+				  <span style="font-weight:bold;font-size:20px;">Tendance</span>
+			  </div>
+			  <div class="col-md-4">
+				<div class="size-genrale" style="position:relative;overflow:hidden;border-radius:3px;margin-bottom:10px;">
+					<span class="btn btn-success btn-sm" style="position:absolute;top:10px;left:10px;background-color:#8ac501;border:1px solid transparent;">NEW JEU</span>
+					<img src="web/img/img4.png" style="width:100%;height:170px;">
+					<div class="size-child" style="padding:10px;background-color:#f4f4f4;padding-bottom:57px;">
+						<span style="font-weight:bold;font-size:14px;">Les jeux indépendants de la semaine (PS5, Xbox Series, Switch, PS4, Xbox One, PC)</span>
+					<br><span style="font-size:12px;">30/08/2021</span>
+					<br><span>Song of Iron est un jeu d'action et d'aventure developpé par une seul ...</span>
+					<br style="margin-bottom:10px;"><div class="btn btn-default btn-xs" style="border:1px solid #333;">PC</div>
+					<div class="btn btn-default btn-xs" style="border:1px solid #8ac501;color:#8ac501;">XBOX SERIES</div>
+					<div class="btn btn-default btn-xs" style="border:1px solid red;color:red;">SWITCH</div>
+					<div class="btn btn-default btn-xs" style="border:1px solid black;">PS5</div>
+					</div>
+				  </div>
+				  <div class="row">
+					<div class="col-md-4" style="padding-right:0px;margin-bottom:10px;">
+						<img src="web/img/img5.png" style="width:100%;height:90px;">
+						
+					</div>
+					<div class="col-md-8" style="padding-left:0px;">
+					<div style="background-color:#f4f4f4;padding-top:5px;padding-bottom:5px;padding-right:6px;padding-left:10px;">
+						<span style="font-size:13px;font-weight:bold;"><span style="color:#8ac501;">News Jeu :</span> Hades : "Ce succès on ne l'a pas vu venir</span><br>
+						<span style="font-size:11px;">28/08/2021 - 07:04 - 21690 vues</span><br>
+						<span style="font-size:11px;">PC - XBOX SERIE</span>
+					</div>
+					</div>
+			   </div>
+			  </div>
+			  <div class="col-md-4">
+				  <div class="row">
+						<div class="col-md-4" style="padding-right:0px;margin-bottom:10px;">
+							<img src="web/img/img5.png" style="width:100%;height:90px;">
+							
+						</div>
+						<div class="col-md-8" style="padding-left:0px;">
+						<div style="background-color:#f4f4f4;padding-top:5px;padding-bottom:5px;padding-right:6px;padding-left:10px;">
+							<span style="font-size:13px;font-weight:bold;"><span style="color:#8ac501;">News Jeu :</span> Hades : "Ce succès on ne l'a pas vu venir</span><br>
+							<span style="font-size:11px;">28/08/2021 - 07:04 - 21690 vues</span><br>
+							<span style="font-size:11px;">PC - XBOX SERIE</span>
+						</div>
+						</div>
+			       </div>
+				   <div class="row">
+					<div class="col-md-4" style="padding-right:0px;margin-bottom:10px;">
+						<img src="web/img/img5.png" style="width:100%;height:90px;">
+						
+					</div>
+					<div class="col-md-8" style="padding-left:0px;">
+					<div style="background-color:#f4f4f4;padding-top:5px;padding-bottom:5px;padding-right:6px;padding-left:10px;">
+						<span style="font-size:13px;font-weight:bold;"><span style="color:#8ac501;">News Jeu :</span> Hades : "Ce succès on ne l'a pas vu venir</span><br>
+						<span style="font-size:11px;">28/08/2021 - 07:04 - 21690 vues</span><br>
+						<span style="font-size:11px;">PC - XBOX SERIE</span>
+					</div>
+					</div>
+			   </div>
+			   <div class="row">
+				<div class="col-md-4" style="padding-right:0px;margin-bottom:10px;">
+					<img src="web/img/img5.png" style="width:100%;height:90px;">
+					
+				</div>
+				<div class="col-md-8" style="padding-left:0px;">
+				<div style="background-color:#f4f4f4;padding-top:5px;padding-bottom:5px;padding-right:6px;padding-left:10px;">
+					<span style="font-size:13px;font-weight:bold;"><span style="color:#8ac501;">News Jeu :</span> Hades : "Ce succès on ne l'a pas vu venir</span><br>
+					<span style="font-size:11px;">28/08/2021 - 07:04 - 21690 vues</span><br>
+					<span style="font-size:11px;">PC - XBOX SERIE</span>
+				</div>
+				</div>
+		   </div>
+		   <div class="row">
+			<div class="col-md-4" style="padding-right:0px;margin-bottom:10px;">
+				<img src="web/img/img5.png" style="width:100%;height:90px;">
+				
+			</div>
+			<div class="col-md-8" style="padding-left:0px;">
+			<div style="background-color:#f4f4f4;padding-top:5px;padding-bottom:5px;padding-right:6px;padding-left:10px;">
+				<span style="font-size:13px;font-weight:bold;"><span style="color:#8ac501;">News Jeu :</span> Hades : "Ce succès on ne l'a pas vu venir</span><br>
+				<span style="font-size:11px;">28/08/2021 - 07:04 - 21690 vues</span><br>
+				<span style="font-size:11px;">PC - XBOX SERIE</span>
+			</div>
+			</div>
+	   </div>
+	   <div class="row">
+		<div class="col-md-4" style="padding-right:0px;margin-bottom:10px;">
+			<img src="web/img/img5.png" style="width:100%;height:90px;">
+			
+		</div>
+		<div class="col-md-8" style="padding-left:0px;">
+		<div style="background-color:#f4f4f4;padding-top:5px;padding-bottom:5px;padding-right:6px;padding-left:10px;">
+			<span style="font-size:13px;font-weight:bold;"><span style="color:#8ac501;">News Jeu :</span> Hades : "Ce succès on ne l'a pas vu venir</span><br>
+			<span style="font-size:11px;">28/08/2021 - 07:04 - 21690 vues</span><br>
+			<span style="font-size:11px;">PC - XBOX SERIE</span>
+		</div>
+		</div>
+   </div>
+			  </div>
+			  <div class="col-md-4">
+				
+					<div class="row">
+					  <div class="col-md-12" style="background-color:black;color:white;padding:10px;">
+						<span style="font-weight:bold;font-size:20px;">Fil d'actualité</span>
+					</div>
+				  </div>
+				  <div class="row">
+					  
+					<div style="background-color:#f4f4f4;padding:10px;">
+						<ul style="list-style-type: none;margin-left:-40px;">
+							<li><span>06/09 - NEWS - Alan Wake Remastered serait en approche pour octobre</span></li>
+							<li>
+								<span>03/09 - NEWS - Horizon Forbidden West étale ses éditions collectors mais 
+								jette un froid sur la mise à niveau PS4 vers PS5
+							    </span>
+						  </li>
+						  <li>
+							  <span>
+								03/09 - NEWS - Horizon Forbidden West étale ses éditions collectors mais jette un froid sur la mise à niveau PS4 vers PS5
+							  </span>
+						  </li>
+						  <li><span>06/09 - NEWS - Alan Wake Remastered serait en approche pour octobre</span></li>
+							<li>
+								<span>03/09 - NEWS - Horizon Forbidden West étale ses éditions collectors mais 
+								jette un froid sur la mise à niveau PS4 vers PS5
+							    </span>
+						  </li>
+						  <li>
+							  <span>
+								03/09 - NEWS - Horizon Forbidden West étale ses éditions collectors mais jette un froid sur la mise à niveau PS4 vers PS5
+							  </span>
+						  </li>
+						  <li>
+							<span>
+							  03/09 - NEWS - Horizon Forbidden West étale ses éditions collectors mais jette un froid sur la mise à niveau PS4 vers PS5
+							</span>
+						</li>
+						  
+						</ul>
+					</div>
+			      </div>
+			  </div>
+              
+			  
+			  <div class="col-md-12" style="margin-bottom:10px;padding-top:20px;">
+				<hr style="margin-top:10px;margin-bottom:10px;">
+				  <span style="font-weight:bold;font-size:20px;">Promos et bons plans Xbox Series</span>
+			  </div>
+			  <div class="col-md-4">
+				<div class="size-genrale" style="position:relative;overflow:hidden;border-radius:3px;margin-bottom:10px;">
+					<span class="btn btn-success btn-sm" style="position:absolute;top:10px;left:10px;background-color:#8ac501;border:1px solid transparent;">NEW BON PLAN</span>
+					<img src="web/img/img4.png" style="width:100%;height:170px;">
+					<div class="size-child" style="padding:10px;background-color:#f4f4f4;padding-bottom:57px;">
+						<span style="font-weight:bold;font-size:14px;">Les jeux indépendants de la semaine (PS5, Xbox Series, Switch, PS4, Xbox One, PC)</span>
+					<br><span style="font-size:12px;">30/08/2021</span>
+					<br><span>Song of Iron est un jeu d'action et d'aventure developpé par une seul ...</span>
+					<br style="margin-bottom:10px;"><div class="btn btn-default btn-xs" style="border:1px solid #333;">PC</div>
+					<div class="btn btn-default btn-xs" style="border:1px solid #8ac501;color:#8ac501;">XBOX SERIES</div>
+					<div class="btn btn-default btn-xs" style="border:1px solid red;color:red;">SWITCH</div>
+					<div class="btn btn-default btn-xs" style="border:1px solid black;">PS5</div>
+					</div>
+				  </div>
+				  
+			  </div>
+			  <div class="col-md-4">
+				<div class="size-genrale" style="position:relative;overflow:hidden;border-radius:3px;margin-bottom:10px;">
+					<span class="btn btn-success btn-sm" style="position:absolute;top:10px;left:10px;background-color:#8ac501;border:1px solid transparent;">NEW BON PLAN</span>
+					<img src="web/img/img4.png" style="width:100%;height:170px;">
+					<div class="size-child" style="padding:10px;background-color:#f4f4f4;padding-bottom:57px;">
+						<span style="font-weight:bold;font-size:14px;">Les jeux indépendants de la semaine (PS5, Xbox Series, Switch, PS4, Xbox One, PC)</span>
+					<br><span style="font-size:12px;">30/08/2021</span>
+					<br><span>Song of Iron est un jeu d'action et d'aventure developpé par une seul ...</span>
+					<br style="margin-bottom:10px;"><div class="btn btn-default btn-xs" style="border:1px solid #333;">PC</div>
+					<div class="btn btn-default btn-xs" style="border:1px solid #8ac501;color:#8ac501;">XBOX SERIES</div>
+					<div class="btn btn-default btn-xs" style="border:1px solid red;color:red;">SWITCH</div>
+					<div class="btn btn-default btn-xs" style="border:1px solid black;">PS5</div>
+					</div>
+				  </div>
+				  
+			  </div>
+			  <div class="col-md-4">
+				<div class="row">
+					<div class="col-md-4" style="padding-right:0px;margin-bottom:10px;">
+						<img src="web/img/img5.png" style="width:100%;height:90px;">
+						
+					</div>
+					<div class="col-md-8" style="padding-left:0px;">
+					<div style="background-color:#f4f4f4;padding-top:5px;padding-bottom:5px;padding-right:6px;padding-left:10px;">
+						<span style="font-size:13px;font-weight:bold;"><span style="color:#8ac501;">News Jeu :</span> Hades : "Ce succès on ne l'a pas vu venir</span><br>
+						<span style="font-size:11px;">28/08/2021 - 07:04 - 21690 vues</span><br>
+						<span style="font-size:11px;">PC - XBOX SERIE</span>
+					</div>
+					</div>
+			   </div>
+			   <div class="row">
+				<div class="col-md-4" style="padding-right:0px;margin-bottom:10px;">
+					<img src="web/img/img5.png" style="width:100%;height:90px;">
+					
+				</div>
+				<div class="col-md-8" style="padding-left:0px;">
+				<div style="background-color:#f4f4f4;padding-top:5px;padding-bottom:5px;padding-right:6px;padding-left:10px;">
+					<span style="font-size:13px;font-weight:bold;"><span style="color:#8ac501;">News Jeu :</span> Hades : "Ce succès on ne l'a pas vu venir</span><br>
+					<span style="font-size:11px;">28/08/2021 - 07:04 - 21690 vues</span><br>
+					<span style="font-size:11px;">PC - XBOX SERIE</span>
+				</div>
+				</div>
+		   </div>
+		   <div class="row">
+			<div class="col-md-4" style="padding-right:0px;margin-bottom:10px;">
+				<img src="web/img/img5.png" style="width:100%;height:90px;">
+				
+			</div>
+			<div class="col-md-8" style="padding-left:0px;">
+			<div style="background-color:#f4f4f4;padding-top:5px;padding-bottom:5px;padding-right:6px;padding-left:10px;">
+				<span style="font-size:13px;font-weight:bold;"><span style="color:#8ac501;">News Jeu :</span> Hades : "Ce succès on ne l'a pas vu venir</span><br>
+				<span style="font-size:11px;">28/08/2021 - 07:04 - 21690 vues</span><br>
+				<span style="font-size:11px;">PC - XBOX SERIE</span>
+			</div>
+			</div>
+	   </div>
+	   <div class="row">
+		<div class="col-md-4" style="padding-right:0px;margin-bottom:10px;">
+			<img src="web/img/img5.png" style="width:100%;height:90px;">
+			
+		</div>
+		<div class="col-md-8" style="padding-left:0px;">
+		<div style="background-color:#f4f4f4;padding-top:5px;padding-bottom:5px;padding-right:6px;padding-left:10px;">
+			<span style="font-size:13px;font-weight:bold;"><span style="color:#8ac501;">News Jeu :</span> Hades : "Ce succès on ne l'a pas vu venir</span><br>
+			<span style="font-size:11px;">28/08/2021 - 07:04 - 21690 vues</span><br>
+			<span style="font-size:11px;">PC - XBOX SERIE</span>
+		</div>
+		</div>
+   </div>
+			  </div>
+		  </div>
+	</div>
+	
+</div>
+</div>
+</div>

@@ -1,0 +1,56 @@
+<div class="container">
+	<div class="row" style="background-color:white;margin-top:100px;padding-top:10px;">
+	  
+    <div class="col-sm-3">
+        <div ng-include="'partials/dashboard-navbar.html'"></div>
+    </div>
+    <div class="col-sm-9">
+        <div style="background-color:#e6e6e6;padding:10px;">
+            <div class="row">
+                <div class="col-md-3">
+                    <div style="border:1px solid #d9d9d9;padding:10px;background-color:white;">
+                    <div ng-include="'partials/actualite/actualite-action.html'"></div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div style="border:1px solid #d9d9d9;padding:10px;background-color:white;border-radius:3px;">
+                    <form class="form-horizontal" ng-controller="actualiteController" method="POST" name="editItem" role="form" ng-submit="saveEdit()">
+                        <div class="row" ng-if="alert_ajouter">
+                            <div class="col-md-12">
+                            <div class="" style="padding:10px;background-color:#caffca;color:green;text-align:center;">
+                            <span style="font-size:px;"><i class="fa fa-check-circle"></i> <b>Actualité modifier avec succès</b></span>
+                            </div>
+                            </div>
+                            </div>
+                        <div class="row">
+                            <div class="col-md-12" style="margin-top:-20px;">
+                                <h2>Modification d'actualité</h2>
+                            </div>
+                        </div>
+                        <input ng-model="form.id" type="hidden" placeholder="Name" name="name" class="form-control" />
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <label for="titre" class="control-label">Titre</label>
+                                <input type="text" class="form-control" ng-model="actualite.titre" name="titre"  placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <label for="resume" class="control-label">Description</label>
+                                <textarea type="text" class="form-control" ng-model="actualite.description" name="description" placeholder="5000 caractères maximum"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button class="btn btn-primary btn-blue btn-sm pull-right" style="padding-left:40px;padding-right:40px;" type="submit">Modification de l'actualité</button>
+                            </div>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  </div>

@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Medilab Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="web/assets/img/favicon.png" rel="icon">
+  <link href="web/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="web/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="web/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="web/assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="web/css/bootstrap.css"> 
+  <link href="web/css/font-awesome.min.css" rel="stylesheet">	
+  <script src="js/vendor/angular.min.js"></script> 
+  <script src="js/app.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/controllers/navController.js"></script>
+  <script src="js/controllers/accueilController.js"></script>
+  <script src="js/controllers/actualiteController.js"></script>
+  <script src="js/vendor/angular-route.js"></script>	
+  <script src="js/directives/fileModel.js"></script>
+  <script src="js/services/fileUpload.js"></script>
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
+    <div class="container d-flex">
+      <div class="contact-info mr-auto">
+        <i class="icofont-envelope"></i> <a href="mailto:contact@example.com">contact@example.com</a>
+        <i class="icofont-phone"></i> +1 5589 55488 55
+        <i class="icofont-google-map"></i> A108 Adam Street, NY
+      </div>
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+        <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+        <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+        <a href="#" class="skype"><i class="icofont-skype"></i></a>
+        <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo mr-auto"><a href="index.html">Jeux-video.ci</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul style="font-weight:bold;">
+          <li class="active"><a href="#/accueil">Actus</a></li>
+          <li><a href="#/jeu">Jeux</a></li>
+          <li><a href="#/jeu">Tests</a></li>
+          <li><a href="#departments">Apercus</a></li>
+          <li><a href="#doctors">Vidéo</a></li>
+          <li class="drop-down"><a href="">Bons plans</a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="drop-down"><a href="#">Deep Drop Down</a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+      <a href="#/dashboard" class="appointment-btn scrollto">Make an Appointment</a>
+
+    </div>
+  </header><!-- End Header -->
+
+
+  
+<body ng-app="myApp" ng-controller="myController" style="background-color:#dbd7d7;">
+<div class="img-fixed">
+	
+	
+	  <main id="main">
+	
+		<!-- ======= Why Us Section ======= -->
+		<section id="why-us" class="why-us">
+		  <div class="container">
+			<div class="row">
+				<div ng-controller="accueilController">
+          <span ng-controller="actualiteController">
+					<div ng-view>
+					</div>
+        </span>
+				  </div>
+			</div>
+		    </div>
+		</section>
+	 </main>
+
+</div>
+
+<script src="js/vendor/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/vendor/bootstrap.js"></script>
+</body>
+</html>
