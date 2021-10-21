@@ -12,8 +12,18 @@
                          <div ng-include="'partials/catalogue/catalogue-action.html'"></div>
                     </div>
                 </div>
-                <div class="col-md-9">
-                        list
+                <div class="col-md-9" ng-controller="catalogueController">
+                    <div class="row">
+                        <div class="col-md-12">
+                        <div style="background-color:white;padding:10px;">
+                            <ul style="list-style-type: none;">
+                                <li ng-repeat="catalogue in listeCatalogue">
+                                    <div class="btn btn-default btn-xs" style="border:1px solid black;margin-bottom:3px;">{{ catalogue.titre }}</div>
+                                </li>
+                            </ul>
+                      </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>

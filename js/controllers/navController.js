@@ -53,5 +53,6 @@ routeAppControllers.controller('new-catalogueCtrl', ['$scope',
 // Contrôleur de la page de list-catalogue
 routeAppControllers.controller('list-catalogueCtrl', ['$scope',
     function($scope){
+        $scope.affiche_catalogue();
     }
 ]);

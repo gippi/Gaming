@@ -34,15 +34,29 @@
                           <div class="form-group">
                               <div class="col-sm-12">
                                   <label for="titre" class="control-label">Titre</label>
-                                  <input type="text" class="form-control" ng-model="actualite.titre_actualite" value="{{ actualite.titre_actualite }}" name="titre_actualite" required="required" placeholder="">
+                                  <input type="text" class="form-control" ng-model="actualite.titre" value="{{ actualite.titre }}" name="titre_actualite" required="required" placeholder="">
                               </div>
                           </div>
                           <div class="form-group">
                               <div class="col-sm-12">
                                   <label for="resume" class="control-label">Description</label>
-                                  <textarea type="text" class="form-control" ng-model="actualite.description_actualite" value="{{ actualite.description_actualite }}" name="description_actualite" required="required" placeholder="5000 caractères maximum"></textarea>
+                                  <textarea type="text" class="form-control" ng-model="actualite.description" value="{{ actualite.description }}" name="description_actualite" required="required" placeholder="5000 caractères maximum"></textarea>
                               </div>
                           </div>
+                          <div class="form-group">
+                            <div class="col-sm-12">
+                                <label for="image" class="control-label">Image</label>
+                                <input file-model='actualite.file' type="file" onchange="angular.element(this).scope().previewPhoto(event)"/>
+                                <div class="row" style="margin-top:5px;">			 
+                                    <div class="col-md-12">			 
+                                 <label for="uploadarticle" class="custom-file-upload">
+                                 <img ng-src="uploads/{{actualite.filename}}" value="uploads/{{actualite.filename}}" class="img-responsive" style="width:100%;height:100px;">
+                                 <img ng-src="{{photo}}" class="img-responsive"/>
+                                 </label>
+                                </div>
+                                </div> 
+                            </div>
+                        </div>
                           <div class="row">
                               <div class="col-md-12">
                                   <button class="btn btn-primary btn-blue btn-sm pull-right" style="padding-left:40px;padding-right:40px;" type="submit">Modification de l'actualité</button>

@@ -26,7 +26,13 @@ myApp.controller("actualiteController",function($scope, $http, $timeout, fileUpl
     $scope.actualite = data;
     
   }
-
+  
+  $scope.edit_actualite = function(){
+    var uploadUrl = REST_SERVICE_URI + '/api/actualite/edit.php';
+     fileUpload.post(uploadUrl,$scope.actualite);
+       $scope.actualite='';
+       $scope.affiche_actualite();
+    }
   
 
 

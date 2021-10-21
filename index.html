@@ -25,12 +25,12 @@
   <script src="js/controllers/navController.js"></script>
   <script src="js/controllers/accueilController.js"></script>
   <script src="js/controllers/actualiteController.js"></script>
+  <script src="js/controllers/catalogueController.js"></script>
   <script src="js/vendor/angular-route.js"></script>	
   <script src="js/directives/fileModel.js"></script>
   <script src="js/services/fileUpload.js"></script>
 </head>
 
-<body>
 
   <!-- ======= Top Bar ======= -->
   <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
@@ -89,8 +89,30 @@
       <a href="#/dashboard" class="appointment-btn scrollto">Make an Appointment</a>
 
     </div>
+    <div class="row">
+      <div class="col-md-12">
+    <div style="padding-top:8px;padding-bottom:1px;padding-left:110px;padding-right:110px;background-color:black;color:white;">
+    <ul class="size-menu" style="list-style-type: none;display: flex;">
+      <li *ngFor="catalogue in listeCatalogue"><a href=""><span>PC</span></a></li>
+      <li><a href=""><span>PS5</span></a></li>
+      <li><a href=""><span>Xbox Series</span></a></li>
+      <li><a href=""><span>PS4</span></a></li>
+      <li><a href=""><span>Xbox One</span></a></li>
+      <li><a href=""><span>Switch</span></a></li>
+      <li><a href=""><span>WiiU</span></a></li>
+      <li><a href=""><span>PS3</span></a></li>
+      <li><a href=""><span>Xbox 360</span></a></li>
+      <li><a href=""><span>3DS</span></a></li>
+      <li><a href=""><span>PS Vita</span></a></li>
+      <li><a href=""><span>iOS</span></a></li>
+      <li><a href=""><span>Android</span></a></li>
+    </ul>
+    </div>
+  </div>
+  </div>
   </header><!-- End Header -->
 
+  
 
   
 <body ng-app="myApp" ng-controller="myController" style="background-color:#dbd7d7;">
@@ -105,10 +127,12 @@
 			<div class="row">
 				<div ng-controller="accueilController">
           <span ng-controller="actualiteController">
-					<div ng-view>
-					</div>
-        </span>
-				  </div>
+            <span ng-controller="catalogueController">
+                <div ng-view>
+                </div>
+            </span>
+         </span>
+				</div>
 			</div>
 		    </div>
 		</section>

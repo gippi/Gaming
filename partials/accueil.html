@@ -1,7 +1,7 @@
 ﻿<div class="container">
 	<div class="row">
 <div class="container">
-	<div class="" style="background-color:white;margin-left:60px;margin-right:60px;margin-top:100px;padding:20px;">
+	<div class="" style="background-color:white;margin-left:60px;margin-right:60px;margin-top:120px;padding:20px;">
 	  <div class="row">
 		<div class="col-md-9">
 			<img src="web/img/banniere.png" style="width:100%;height:400px;">
@@ -38,13 +38,21 @@
 				  <span style="font-weight:bold;font-size:20px;">L'univers « Xbox Series »</span>
 			  </div>
 			  <div class="col-md-4" ng-repeat="data in listeActualite">
-				  <div class="size-genrale" style="position:relative;overflow:hidden;border-radius:3px;margin-bottom:20px;">
+				  <div class="size-genrale" style="position:relative;overflow:hidden;border-radius:3px 3px 0px 0px;;margin-bottom:20px;">
 					<span class="btn btn-success btn-sm" style="position:absolute;top:10px;left:10px;background-color:#8ac501;border:1px solid transparent;">NEW JEU</span>
 					<img ng-src="uploads/{{data.filename}}" class="img-responsive" style="width:100%;height:170px;">
 					<div class="size-child" style="padding:10px;background-color:black;color:white;position:absolute;bottom:0px;background-color: rgba(0, 0, 0, 0.7);">
-						<span>{{ data.titre_actualite| limitTo: 77 }}{{data.titre_actualite.length > 77 ? '...' : ''}}</span>
+						<span>{{ data.titre| limitTo: 77 }}{{data.titre.length > 77 ? '...' : ''}}</span>
 					</div>
+					
 				  </div>
+				  <div class="" style="border-radius:0px 0px 3px 3px;background-color:#f4f4f4;padding:8px;margin-top:-22px;">
+					<div class="btn btn-default btn-xs" style="border:1px solid #333;">PC</div>
+					<div class="btn btn-default btn-xs" style="border:1px solid #8ac501;color:#8ac501;">XBOX SERIES</div>
+					<div class="btn btn-default btn-xs" style="border:1px solid red;color:red;">SWITCH</div>
+					<div class="btn btn-default btn-xs" style="border:1px solid black;">PS5</div>
+					</div>
+				  
 			</div>
 			
 
@@ -158,7 +166,7 @@
 				  <div class="row">
 					  
 					<div style="background-color:#f4f4f4;padding:10px;">
-						<ul style="list-style-type: none;margin-left:-40px;">
+						<ul style="list-style-type:none;margin-left:-40px;">
 							<li><span>06/09 - NEWS - Alan Wake Remastered serait en approche pour octobre</span></li>
 							<li>
 								<span>03/09 - NEWS - Horizon Forbidden West étale ses éditions collectors mais 

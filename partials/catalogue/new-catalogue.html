@@ -13,7 +13,41 @@
                     </div>
                 </div>
                 <div class="col-md-9">
-                        new
+                    <div style="border:1px solid #d9d9d9;padding:10px;background-color:white;border-radius:3px;">
+                        <form class="form-horizontal" ng-controller="catalogueController" method="post" ng-submit="creer_catalogue();">
+                            <div class="row" ng-if="alert_ajouter">
+                                <div class="col-md-12">
+                                <div class="" style="padding:10px;background-color:#caffca;color:green;text-align:center;">
+                                <span style="font-size:px;"><i class="fa fa-check-circle"></i> <b>Catalogue ajouter avec succès</b></span>
+                                </div>
+                                </div>
+                                </div>
+                            <div class="row">
+                                <div class="col-md-12" style="margin-top:-20px;">
+                                    <h2>Création de catalogue</h2>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <label for="titre" class="control-label">Titre</label>
+                                    <input type="text" class="form-control" ng-model="catalogue.titre" name="titre" required="required" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <label for="description" class="control-label">Description</label>
+                                    <textarea type="text" class="form-control" ng-model="catalogue.description" name="description" required="required" placeholder="5000 caractères maximum"></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button class="btn btn-success btn-green btn-sm" style="padding-left:40px;padding-right:40px;" type="submit">Créer catalogue</button>
+                                </div>
+                            </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
